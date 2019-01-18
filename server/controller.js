@@ -1,0 +1,5 @@
+let allInfo = [];
+
+module.exports = {
+
+}
