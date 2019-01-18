@@ -23,11 +23,25 @@
 }
 
 .main-section {
-  background-color: slategray;
   height: 100vh;
   width: calc(100vw - 300px);
   display: flex;
+  flex-direction: column;
 }
+
+  .main-body-title {
+    background-color: tomato;
+    height: 100px;
+    width: 100%;
+    display: flex;
+  }
+
+  .scenario-display-parent {
+    background-color: #61dafb;
+    height: 100px;
+    width: 100%;
+    display: flex;
+  }
 
 .sidebar {
   background-color: slateblue;

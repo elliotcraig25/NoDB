@@ -3,6 +3,7 @@ import './App.css';
 // import axios from 'axios';
 
 import MainBody from './Components/MainComponent/MainBody'
+import ParentSideComponent from './Components/SideComponent/ParentSideComponent'
 
 class App extends Component {
   //componentDidMount is just an example
@@ -20,13 +21,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <div className="main-section">
-
-        </div> */}
         <MainBody />
-        <div className="sidebar">
-
-        </div>
+        <ParentSideComponent />
       </div>
     );
   }
