@@ -56,7 +56,15 @@
       height: 50%;
       width: 100%;
       display: flex;
+      justify-content: space-evenly;
+      align-items: center;
     }
+
+      .response-a-one {
+        background-color: tan;
+        height: 90%;
+        width: 200px;
+      }
 
 .sidebar {
   background-color: slateblue;
