@@ -1,31 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
+// import axios from 'axios';
+
+import MainBody from './Components/MainComponent/MainBody'
 
 class App extends Component {
   //componentDidMount is just an example
-    componentDidMount(){
-      axios.get('/api/whatever')
-    }
+    // componentDidMount(){
+    //   axios.get('/api/whatever')
+    // }
   //above is an example
+  constructor(){
+    super();
+    this.state = {
+
+    };
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        {/* <div className="main-section">
+
+        </div> */}
+        <MainBody />
+        <div className="sidebar">
+
+        </div>
       </div>
     );
   }

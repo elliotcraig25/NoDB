@@ -1,9 +1,9 @@
 .App {
-  text-align: center;
+  display: flex;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite .2s linear;
   height: 40vmin;
 }
 
@@ -20,6 +20,20 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.main-section {
+  background-color: slategray;
+  height: 100vh;
+  width: calc(100vw - 300px);
+  display: flex;
+}
+
+.sidebar {
+  background-color: slateblue;
+  height: 100vh;
+  width: 300px;
+  display: flex;
 }
 
 @keyframes App-logo-spin {
