@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import MainBodyTitle from './MainBodyTitle/MainBodyTitle';
-import ScenarioDisplay from './ScenarioAndResponses/ScenarioDisplay/ScenarioDisplay';
+import ScenarioAndResponses from './ScenarioAndResponses/ScenarioAndResponse';
 
 class MainBody extends Component {
     constructor(){
@@ -14,7 +14,7 @@ class MainBody extends Component {
         return (
             <div className="main-section">
                 <MainBodyTitle />
-                <ScenarioDisplay />
+                <ScenarioAndResponses />
             </div>
         );
     };

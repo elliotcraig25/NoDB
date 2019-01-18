@@ -9,7 +9,7 @@ class ScenarioDisplay extends Component {
     };
     render(){
         return(
-            <div className='scenario-display-parent'>
+            <div className='scenario-display'>
                 
             </div>
         );

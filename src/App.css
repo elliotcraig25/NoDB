@@ -36,12 +36,27 @@
     display: flex;
   }
 
-  .scenario-display-parent {
-    background-color: #61dafb;
-    height: 100px;
+  .scenario-and-response {
+    background-color: aqua;
+    height: calc(100% - 100px);
     width: 100%;
     display: flex;
+    flex-direction: column;
   }
+  
+    .scenario-display {
+      background-color: lawngreen;
+      height: 50%;
+      width: 100%;
+      display: flex;
+    }
+    
+    .responses-display {
+      background-color: mediumpurple;
+      height: 50%;
+      width: 100%;
+      display: flex;
+    }
 
 .sidebar {
   background-color: slateblue;
