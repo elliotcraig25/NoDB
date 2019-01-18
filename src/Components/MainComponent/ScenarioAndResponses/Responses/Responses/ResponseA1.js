@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+// import axios from 'axios';
 
 class ResponseA1 extends Component {
     constructor(){
@@ -35,14 +36,14 @@ class ResponseA1 extends Component {
                 {this.state.submitedInput.length ? (
                     <div>
                         <p>{this.state.submitedInput}</p>
-                        <button onClick={()=>this.clearSumbitedInput()}>reset</button>
+                        <button onClick={()=>this.clearSumbitedInput()}>Reset</button>
                     </div>
                 ) : (
                     <div>
                         <input 
                         onChange={(e)=>this.handleUserInput(e.target.value)}
                         />
-                        <button onClick={()=>this.handleButtonClick()}>abc</button>
+                        <button onClick={()=>this.handleButtonClick()}>Add</button> 
                     </div>
                 )
                 }

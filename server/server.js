@@ -6,7 +6,7 @@ const ctrl = require('./controller');
 const app = express();
 app.use(bodyParser.json());
 
-// app.get();
+app.get(`/api/info`, ctrl.getInfo);
 
 // app.post();
 
