@@ -29,10 +29,15 @@ class ScenarioDisplay extends Component {
     }
 
     render(){
+        let mapped = this.state.messageFromResponse.map((element)=>{
+            return (
+                <p>{element}</p>
+            )
+        })
         return(
             <div className='scenario-display'>
                 <button className="scenario-display-button" onClick={this.handleGettingMessages}>Get</button>
-                <p>{this.state.messageFromResponse}</p>
+                <p>{mapped}</p>
             </div>
         );
     };

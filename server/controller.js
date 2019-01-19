@@ -1,4 +1,4 @@
-let allInfo = ['Joe', 'Bob', 'Bill', 'Mill', 'Till', 'Will', 'Sill'];
+let allInfo = [];
 
 module.exports = {
     module: {
@@ -16,10 +16,9 @@ module.exports = {
     addInfo: (req, res) => {
         const newInfo = {
             body: req.body.text,
-            index: index
         };
 
-        allInfo.push(newInfo)
+        allInfo.push(newInfo.body)
         res.status(200).send(allInfo)
     }
 } 
