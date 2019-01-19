@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 app.get(`/api/info`, ctrl.getInfo);
 
-// app.post();
+app.post(`/api/info`, ctrl.addInfo);
 
 // app.put();
 

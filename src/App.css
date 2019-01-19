@@ -50,6 +50,10 @@
       width: 100%;
       display: flex;
     }
+
+      .scenario-display-button {
+        height: 20px;
+      }
     
     .responses-display {
       background-color: mediumpurple;

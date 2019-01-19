@@ -37,6 +37,7 @@ class ResponseA1 extends Component {
                     <div>
                         <p>{this.state.submitedInput}</p>
                         <button onClick={()=>this.clearSumbitedInput()}>Reset</button>
+                        <button>Add</button>
                     </div>
                 ) : (
                     <div>
