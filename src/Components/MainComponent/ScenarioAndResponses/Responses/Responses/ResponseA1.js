@@ -40,7 +40,7 @@ class ResponseA1 extends Component {
             this.setState({
                 info: response.data
             })
-            console.log(response.data)
+            console.log(this.state.info)
         })
     }
 

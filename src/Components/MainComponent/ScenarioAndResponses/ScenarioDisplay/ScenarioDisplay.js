@@ -19,6 +19,7 @@ class ScenarioDisplay extends Component {
     //     console.log(this.state.messageFromResponse)
     // }
 
+    
     handleGettingMessages(){
         axios.get(`/api/info`).then(response=>{
             this.setState({
