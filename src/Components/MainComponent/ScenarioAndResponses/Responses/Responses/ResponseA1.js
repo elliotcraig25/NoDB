@@ -42,20 +42,23 @@ class ResponseA1 extends Component {
             })
             console.log(this.state.info)
         })
+        this.setState({
+            submitedInput: ''
+        })
     }
 
     render(){
         return(
             <div className='response-a-one' >
                 {this.state.submitedInput.length ? (
-                    <div>
+                    <div className='response-a-two'>
                         <p>{this.state.submitedInput}</p>
                         <button onClick={()=>this.clearSumbitedInput()}>Reset</button>
                         <button onClick={()=>this.postResponseBoxInfo()}>Add</button>
                     </div>
                 ) : (
-                    <div>
-                        <input 
+                    <div className='response-a-two'>
+                        <input className='response-input' 
                         onChange={(e)=>this.handleUserInput(e.target.value)}
                         />
                         <button onClick={()=>this.handleButtonClick()}>Add</button> 

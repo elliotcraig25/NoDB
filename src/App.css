@@ -69,7 +69,18 @@
         background-color: tan;
         height: 90%;
         width: 200px;
+        display: flex;
+        flex-direction: column;
       }
+
+        .response-a-two {
+          display: flex;
+          flex-direction: column;
+        }
+
+          .response-input {
+            height: 200px;
+          }
 
 .sidebar {
   background-color: slateblue;
