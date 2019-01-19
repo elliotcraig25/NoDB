@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 
 class ResponseA1 extends Component {
     constructor(){
@@ -30,6 +30,12 @@ class ResponseA1 extends Component {
         })
     }
 
+
+    //this is what i'm working on at this commit
+    postResponseBoxInfo(){
+        axios.post(`/api/info`)
+    }
+
     render(){
         return(
             <div className='response-a-one' >
@@ -37,7 +43,7 @@ class ResponseA1 extends Component {
                     <div>
                         <p>{this.state.submitedInput}</p>
                         <button onClick={()=>this.clearSumbitedInput()}>Reset</button>
-                        <button>Add</button>
+                        <button onClick={()=>this.state.postResponseBoxInfo()}>Add</button>
                     </div>
                 ) : (
                     <div>

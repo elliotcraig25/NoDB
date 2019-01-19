@@ -1,4 +1,4 @@
-let allInfo = ['Joe', 'Bob'];
+let allInfo = ['Joe', 'Bob', 'Bill', 'Mill', 'Till', 'Will', 'Sill'];
 
 module.exports = {
     module: {
