@@ -10,7 +10,9 @@ app.get(`/api/info`, ctrl.getInfo);
 
 app.post(`/api/info`, ctrl.addInfo);
 
-app.put(`/api/info`, ctrl.updateInfo);
+app.put(`/api/info`, ctrl.update);
+
+app.put(`/api/moreinfo`, ctrl.updateCurrent);
 
 // app.delete();
 

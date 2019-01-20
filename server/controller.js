@@ -1,6 +1,8 @@
 let allInfo = [];
+let currentIndex = 0;
 let arrayOfItems = [
     {id: 1,
+    currentItem: 0, 
     senPartOne: 'The',
     senPartTwo: 'went to',
     senPartThree: 'to get',
@@ -11,6 +13,7 @@ let arrayOfItems = [
     wordHolderThree: 'THING',
     wordHolderFour: 'NOUN',},
     {id: 2,
+    currentItem: 0, 
     senPartOne: 'The2',
     senPartTwo: 'went to2',
     senPartThree: 'to get2',
@@ -21,6 +24,7 @@ let arrayOfItems = [
     wordHolderThree: 'THING2',
     wordHolderFour: 'NOUN2',},
     {id: 3,
+    currentItem: 0, 
     senPartOne: 'The3',
     senPartTwo: 'went to3',
     senPartThree: 'to get3',
@@ -31,6 +35,7 @@ let arrayOfItems = [
     wordHolderThree: 'THING3',
     wordHolderFour: 'NOUN3',},
     {id: 4,
+    currentItem: 0, 
     senPartOne: 'The4',
     senPartTwo: 'went to4',
     senPartThree: 'to get4',
@@ -41,6 +46,7 @@ let arrayOfItems = [
     wordHolderThree: 'THING2',
     wordHolderFour: 'NOUN2',},
     {id: 5,
+    currentItem: 0, 
     senPartOne: 'The5',
     senPartTwo: 'went to2',
     senPartThree: 'to get2',
@@ -74,13 +80,30 @@ module.exports = {
         
         res.status(200).send(allInfo)
     },
-    updateInfo: (req, res) => {
-        const responseInput = {
-            resInput: req.body.text
-        }
+    update: (req, res)=>{
+        const {text} = req.body;
+        let parts = arrayOfItems[currentIndex]
 
-        arrayOfItems[0].senPartOne = responseInput.resInput
-        console.log(arrayOfItems[0].senPartOne)
-        res.status(200)
-    }
-} 
+        arrayOfItems[currentIndex]={
+            id: parts.id,
+            currentItem: parts.currentItem,
+            senPartOne: parts.senPartOne,
+            senPartTwo: parts.senPartTwo,
+            senPartThree: parts.senPartThree,
+            senPartFour: parts.senPartFour,
+            senPartFive: parts.senPartFive,
+            wordHolderOne: text,
+            wordHolderTwo: 'PLACE',
+            wordHolderThree: 'THING',
+            wordHolderFour: 'NOUN',
+        };
+        res.status(200).send(arrayOfItems);
+    },
+    updateCurrent: (req, res)=>{
+        const {index} = req.body
+
+        currentIndex = index + 1
+
+        res.status(200).send(currentIndex);
+    } 
+}  

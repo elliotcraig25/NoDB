@@ -41,6 +41,10 @@ class ScenarioDisplay extends Component {
             })
         }
         this.handleDivButtonClick()
+        let objOfTheBody = {
+            index: this.state.curIndex
+        }
+        axios.put(`/api/moreinfo`, objOfTheBody)
     }
     
     render(){
@@ -51,11 +55,12 @@ class ScenarioDisplay extends Component {
                         <div>
                             <p>{this.state.curStr}</p>
                             <button onClick={()=>this.nextButton()}>Next</button>
+                            <button onClick={()=>this.handleDivButtonClick()}>Create</button>
                         </div>
                     ) : (
                         <div>
                             <button className="button-div-one" onClick={()=>this.handleDivButtonClick()}>
-                                <h3>Get Sentence</h3>
+                                <h3>Get Sentence</h3> 
                             </button>
                         </div>
                     )

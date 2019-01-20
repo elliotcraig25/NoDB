@@ -21,7 +21,7 @@ class ResponseA1 extends Component {
             submitedInput: this.state.userInput,
             userInput: ''
         })
-        console.log(this.state.submitedInput)
+        // console.log(this.state.submitedInput)
     }
 
     clearSumbitedInput(){
@@ -34,7 +34,7 @@ class ResponseA1 extends Component {
         let bodyObj = {
             text: this.state.submitedInput
         }
-        axios.put(`/api/info`)
+        axios.put(`/api/info`, bodyObj)
             .then(res => {
                 console.log(res.data)
             })
