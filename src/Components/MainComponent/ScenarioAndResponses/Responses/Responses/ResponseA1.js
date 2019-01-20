@@ -30,24 +30,25 @@ class ResponseA1 extends Component {
         })
     }
 
+    
 
-    //this is what i'm working on at commit
-    postResponseBoxInfo(){
-        let bodyObj = {
-            text: this.state.submitedInput
-        }
-        axios.post(`/api/info`, bodyObj).then(response=>{
-            this.setState({
-                info: response.data
-            })
-            console.log(this.state.info)
-        })
-        this.setState({
-            submitedInput: ''
-        })
-    }
+    // //this is what i'm working on at commit
+    // postResponseBoxInfo(){
+    //     let bodyObj = {
+    //         text: this.state.submitedInput
+    //     }
+    //     axios.post(`/api/info`, bodyObj).then(response=>{
+    //         this.setState({
+    //             info: response.data
+    //         })
+    //         console.log(this.state.info)
+    //     })
+    //     this.setState({
+    //         submitedInput: ''
+    //     })
+    // }
 
-    render(){
+    render(){ 
         return(
             <div className='response-a-one' >
                 {this.state.submitedInput.length ? (

@@ -5,55 +5,119 @@ class ScenarioDisplay extends Component {
     constructor(){
         super();
         this.state = {
-            messageFromResponse: []
+            strToDisplay: '',
+            curStr: '',
+            curIndex: 0,
+            totalNumber: 5-1,
         };
-        // this.handleGettingMessages = this.handleGettingMessages.bind( this );
+        
     };
     
-    // componentDidMount(){
-    //     axios.get(`/api/info`).then(response=>{
-    //         this.setState({
-    //             messageFromResponse: response.data
-    //         })
-    //     })
-    //     console.log(this.state.messageFromResponse)
-    // }
-
-    
-    componentDidMount(){
+    handleDivButtonClick(){
         axios.get(`/api/info`).then(response=>{
             this.setState({
-                messageFromResponse: response.data
+                curStr: `
+                    ${response.data[this.state.curIndex].senPartOne} 
+                    ${response.data[this.state.curIndex].wordHolderOne} 
+                    ${response.data[this.state.curIndex].senPartTwo} 
+                    ${response.data[this.state.curIndex].wordHolderTwo} 
+                    ${response.data[this.state.curIndex].senPartThree} 
+                    ${response.data[this.state.curIndex].wordHolderThree}
+                    ${response.data[this.state.curIndex].senPartFour}
+                    ${response.data[this.state.curIndex].wordHolderFour}
+                    ${response.data[this.state.curIndex].senPartFive}`
             })
         })
-        console.log(this.state.messageFromResponse)
     }
 
-    
-
-    handleGettingMessages(){
-        axios.get(`/api/info`).then(response=>{
+    nextButton(){
+        if(this.state.curIndex<this.state.totalNumber){
             this.setState({
-                messageFromResponse: response.data
+                curIndex: this.state.curIndex+1
             })
-        })
-        console.log(this.state.messageFromResponse)
+        }else{
+            this.setState({
+                curIndex: 0
+            })
+        }
+        this.handleDivButtonClick()
     }
- 
+    
     render(){
-        let mapped = this.state.messageFromResponse.map((element)=>{
-            return (
-                <p>{element}</p>
-            )
-        })
-        console.log(this.state.messageFromResponse)
         return(
             <div className='scenario-display'>
-                {/* <button className="scenario-display-button" onClick={this.handleGettingMessages}>Get</button> */}
-                <p>{mapped}</p>
+                {
+                    this.state.curStr.length ? (
+                        <div>
+                            <p>{this.state.curStr}</p>
+                            <button onClick={()=>this.nextButton()}>Next</button>
+                        </div>
+                    ) : (
+                        <div>
+                            <button className="button-div-one" onClick={()=>this.handleDivButtonClick()}>
+                                <h3>Get Sentence</h3>
+                            </button>
+                        </div>
+                    )
+                }
             </div>
         );
     };
 };
 
 export default ScenarioDisplay
+
+// class ScenarioDisplay extends Component {
+//     constructor(){
+//         super();
+//         this.state = {
+//             messageFromResponse: []
+//         };
+//         // this.handleGettingMessages = this.handleGettingMessages.bind( this );
+//     };
+    
+//     // componentDidMount(){
+//     //     axios.get(`/api/info`).then(response=>{
+//     //         this.setState({
+//     //             messageFromResponse: response.data
+//     //         })
+//     //     })
+//     //     console.log(this.state.messageFromResponse)
+//     // }
+
+    
+//     componentDidMount(){
+//         axios.get(`/api/info`).then(response=>{
+//             this.setState({
+//                 messageFromResponse: response.data
+//             })
+//         })
+//         console.log(this.state.messageFromResponse)
+//     }
+
+    
+
+//     handleGettingMessages(){
+//         axios.get(`/api/info`).then(response=>{
+//             this.setState({
+//                 messageFromResponse: response.data
+//             })
+//         })
+//         console.log(this.state.messageFromResponse)
+//     }
+ 
+//     render(){
+//         let mapped = this.state.messageFromResponse.map((element)=>{
+//             return (
+//                 <p>{element}</p>
+//             )
+//         })
+//         console.log(this.state.messageFromResponse)
+//         return(
+//             <div className='scenario-display'>
+//                 {/* <button className="scenario-display-button" onClick={this.handleGettingMessages}>Get</button> */}
+//                 <p>{mapped}</p>
+//             </div>
+//         );
+//     };
+// };
