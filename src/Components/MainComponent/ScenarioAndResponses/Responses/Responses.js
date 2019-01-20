@@ -12,10 +12,10 @@ class Responses extends Component {
     render(){
         return(
             <div className='responses-display'>
-                <ResponseA1 />
-                <ResponseA1 />
-                <ResponseA1 />
-                <ResponseA1 />
+                <ResponseA1 identification = 'a'/>
+                <ResponseA1 identification = 'b'/>
+                <ResponseA1 identification = 'c'/>
+                <ResponseA1 identification = 'd'/>
             </div>
         )
     }

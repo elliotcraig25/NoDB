@@ -80,7 +80,14 @@ module.exports = {
         
         res.status(200).send(allInfo)
     },
-    update: (req, res)=>{
+    updateCurrent: (req, res)=>{
+        const {index} = req.body
+
+        currentIndex = index + 1
+
+        res.status(200).send(currentIndex);
+    },
+    updateA: (req, res)=>{
         const {text} = req.body;
         let parts = arrayOfItems[currentIndex]
 
@@ -93,17 +100,48 @@ module.exports = {
             senPartFour: parts.senPartFour,
             senPartFive: parts.senPartFive,
             wordHolderOne: text,
+            wordHolderTwo: parts.wordHolderTwo,
+            wordHolderThree: parts.wordHolderThree,
+            wordHolderFour: parts.wordHolderFour,
+        };
+        res.status(200).send(arrayOfItems);
+    },
+    updateB: (req, res)=>{
+        const {text} = req.body;
+        let parts = arrayOfItems[currentIndex]
+
+        arrayOfItems[currentIndex]={
+            id: parts.id,
+            currentItem: parts.currentItem,
+            senPartOne: parts.senPartOne,
+            senPartTwo: parts.senPartTwo,
+            senPartThree: parts.senPartThree,
+            senPartFour: parts.senPartFour,
+            senPartFive: parts.senPartFive,
+            wordHolderOne: parts.wordHolderOne,
+            wordHolderTwo: text,
+            wordHolderThree: parts.wordHolderThree,
+            wordHolderFour: parts.wordHolderFour,
+        };
+        res.status(200).send(arrayOfItems);
+    },
+    updateC: (req, res)=>{
+        const {text} = req.body;
+        let parts = arrayOfItems[currentIndex]
+
+        arrayOfItems[currentIndex]={
+            id: parts.id,
+            currentItem: parts.currentItem,
+            senPartOne: parts.senPartOne,
+            senPartTwo: parts.senPartTwo,
+            senPartThree: parts.senPartThree,
+            senPartFour: parts.senPartFour,
+            senPartFive: parts.senPartFive,
+            wordHolderOne: 'NOUN',
             wordHolderTwo: 'PLACE',
-            wordHolderThree: 'THING',
+            wordHolderThree: text,
             wordHolderFour: 'NOUN',
         };
         res.status(200).send(arrayOfItems);
     },
-    updateCurrent: (req, res)=>{
-        const {index} = req.body
-
-        currentIndex = index + 1
-
-        res.status(200).send(currentIndex);
-    } 
 }  

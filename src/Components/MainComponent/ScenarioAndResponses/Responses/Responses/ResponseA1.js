@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 class ResponseA1 extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             userInput: '',
             submitedInput: '',
+            identification: this.props.identification
         }
     }
-    
     handleUserInput(value){
         this.setState({
             userInput: value
@@ -34,10 +34,29 @@ class ResponseA1 extends Component {
         let bodyObj = {
             text: this.state.submitedInput
         }
-        axios.put(`/api/info`, bodyObj)
+        
+        if(this.state.identification==='a'){
+            axios.put(`/api/info/a`, bodyObj)
             .then(res => {
                 console.log(res.data)
             })
+        }else if(this.state.identification==='b'){
+            axios.put(`/api/info/b`, bodyObj)
+            .then(res => {
+                console.log(res.data)
+            })
+        }else if(this.state.identification==='c'){
+            axios.put(`/api/info/c`, bodyObj)
+            .then(res => {
+                console.log(res.data)
+            })
+        }else if(this.state.identification==='d'){
+            axios.put(`/api/info/d`, bodyObj)
+            .then(res => {
+                console.log(res.data)
+            })
+        }
+        
     }
 
     // //this is what i'm working on at commit
