@@ -18,6 +18,8 @@ app.put(`/api/info/b`, ctrl.updateB);
 
 app.put(`/api/info/c`, ctrl.updateC); 
 
+app.put(`/api/info/d`, ctrl.updateD); 
+
 // app.delete();
 
 

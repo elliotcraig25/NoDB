@@ -137,10 +137,29 @@ module.exports = {
             senPartThree: parts.senPartThree,
             senPartFour: parts.senPartFour,
             senPartFive: parts.senPartFive,
-            wordHolderOne: 'NOUN',
-            wordHolderTwo: 'PLACE',
+            wordHolderOne: parts.wordHolderOne,
+            wordHolderTwo: parts.wordHolderTwo,
             wordHolderThree: text,
-            wordHolderFour: 'NOUN',
+            wordHolderFour: parts.wordHolderFour,
+        };
+        res.status(200).send(arrayOfItems);
+    },
+    updateD: (req, res)=>{
+        const {text} = req.body;
+        let parts = arrayOfItems[currentIndex]
+
+        arrayOfItems[currentIndex]={
+            id: parts.id,
+            currentItem: parts.currentItem,
+            senPartOne: parts.senPartOne,
+            senPartTwo: parts.senPartTwo,
+            senPartThree: parts.senPartThree,
+            senPartFour: parts.senPartFour,
+            senPartFive: parts.senPartFive,
+            wordHolderOne: parts.wordHolderOne,
+            wordHolderTwo: parts.wordHolderTwo,
+            wordHolderThree: parts.wordHolderThree,
+            wordHolderFour: text,
         };
         res.status(200).send(arrayOfItems);
     },
