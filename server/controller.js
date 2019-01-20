@@ -74,5 +74,13 @@ module.exports = {
         
         res.status(200).send(allInfo)
     },
-    
+    updateInfo: (req, res) => {
+        const responseInput = {
+            resInput: req.body.text
+        }
+
+        arrayOfItems[0].senPartOne = responseInput.resInput
+        console.log(arrayOfItems[0].senPartOne)
+        res.status(200)
+    }
 } 

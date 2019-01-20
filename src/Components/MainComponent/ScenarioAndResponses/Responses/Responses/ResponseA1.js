@@ -30,7 +30,15 @@ class ResponseA1 extends Component {
         })
     }
 
-    
+    updateResponse(){
+        let bodyObj = {
+            text: this.state.submitedInput
+        }
+        axios.put(`/api/info`)
+            .then(res => {
+                console.log(res.data)
+            })
+    }
 
     // //this is what i'm working on at commit
     // postResponseBoxInfo(){
@@ -55,7 +63,7 @@ class ResponseA1 extends Component {
                     <div className='response-a-two'>
                         <p>{this.state.submitedInput}</p>
                         <button onClick={()=>this.clearSumbitedInput()}>Reset</button>
-                        <button onClick={()=>this.postResponseBoxInfo()}>Add</button>
+                        <button onClick={()=>this.updateResponse()}>Add</button>
                     </div>
                 ) : (
                     <div className='response-a-two'>
