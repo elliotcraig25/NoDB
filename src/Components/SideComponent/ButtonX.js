@@ -6,7 +6,8 @@ class ButtonX extends Component {
         super()
         this.state = {
             buttonXClicked: false,
-            whatTheHeckMessage: ''
+            whatTheHeckMessage: '',
+            yes: 'Yes'
         }
     }
 
@@ -19,6 +20,12 @@ class ButtonX extends Component {
     theyClickedButtonX(){
         axios.delete(`/api/protocol/x`)
     }
+
+    changeYes(){
+        this.setState({
+            yes: "DON'T DO IT"
+        })
+    }
     
     render(){
         return(
@@ -29,13 +36,13 @@ class ButtonX extends Component {
                             <h3 className="warning">WARNING:</h3>
                             <h5 className="warning">This button was built specifically to meet the projects delete requirement. Functionality was NOT taken into consideration during the construction of this button. Pressing yes will break this site.</h5>
                             <h5 className="warning">Are you sure you want to continue?</h5>
-                            <button onClick={()=>this.theyClickedButtonX()}>Yes</button>
-                            <button onClick={()=>this.changeButtonX()}>No</button>
+                            <button onClick={()=>this.changeButtonX()} className="the-button-x-no">No</button>
+                            <button onClick={()=>this.theyClickedButtonX()} className="the-button-x-yes" onMouseOver={()=>this.changeYes()}>{this.state.yes}</button>
                         </div>
                     </div>
                 ) : (
                     <div className="button-x">
-                        <button onClick={()=>this.changeButtonX()}>button X</button>
+                        <button onClick={()=>this.changeButtonX()} className="the-button-x">button X</button>
                     </div>
                 )
                 }

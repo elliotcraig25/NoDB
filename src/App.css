@@ -30,7 +30,7 @@
 }
 
   .main-body-title {
-    background-color: 	#a9958d;
+    background-color: #f44747;
     height: 100px;
     width: 100%;
     display: flex;
@@ -62,7 +62,7 @@
       }
     
     .responses-display {
-      background-color: #cfc0b7;
+      background-color: #0e68ce;
       height: 70%;
       width: 100%;
       display: flex;
@@ -72,7 +72,7 @@
     }
 
       .response-a-one {
-        background-color: #e8dfd9;
+        background-color: #7fdb6a;
         height: 60%;
         width: 200px;
         display: flex;
@@ -91,19 +91,20 @@
           
 
 .sidebar {
-  background-color: #e8dfd9;
+  background-color: #EDEAE0;
   height: calc(100vh - 10px);
   width: 290px;
   padding: 5px;
 }
 
 .button-div-one {
-  background-color: #bba9a2;
+  /* background-color: #EDEAE0; */
   height: 100px;
   width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: solid #f44747 1px;
 }
 
 .the-display-buttons {
@@ -129,9 +130,47 @@
 }
 
 .warning {
-  color: red;
+  color: #f44747;
 }
 
+.button-y {
+  background-color: white;
+  border: none;
+  margin: 1px;
+}
+
+.button-z {
+  background-color: white;
+  border: solid #0e68ce 1px;
+  margin: 1px;
+}
+
+input {
+  border: none;
+  margin: 1px;
+}
+
+.the-button-x {
+  background: white;
+  border: none;
+}
+
+.the-button-x-yes {
+  background: #f44747;
+  border: none;
+  position: absolute;
+  right: 5px;
+}
+
+.the-button-x-no {
+  background: #7fdb6a;
+  border: none;
+}
+
+button {
+  border: none;
+  margin: 1px;
+}
 
 @keyframes App-logo-spin {
   from {

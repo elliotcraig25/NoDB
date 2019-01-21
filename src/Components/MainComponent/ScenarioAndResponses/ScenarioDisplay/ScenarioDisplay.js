@@ -74,8 +74,8 @@ class ScenarioDisplay extends Component {
                                 <p>{this.state.curStr}</p>
                             </div>
                             <div className="the-display-buttons">
-                                <button onClick={()=>this.handleDivButtonClickOne()}>Create</button>
-                                <button onClick={()=>this.nextButton()}>Next</button>
+                                <button onClick={()=>this.handleDivButtonClickOne()} className="button-z">Create</button>
+                                <button onClick={()=>this.nextButton()} className="button-z">Next</button>
                             </div>
                         </div>
                     ) : (
