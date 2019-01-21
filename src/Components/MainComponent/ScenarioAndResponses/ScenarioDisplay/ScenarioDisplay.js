@@ -24,7 +24,7 @@ class ScenarioDisplay extends Component {
                     ${response.data[this.state.curIndex].senPartThree} 
                     ${response.data[this.state.curIndex].wordHolderThree}
                     ${response.data[this.state.curIndex].senPartFour}
-                    ${response.data[this.state.curIndex].wordHolderFour}ed
+                    ${response.data[this.state.curIndex].wordHolderFour}
                     ${response.data[this.state.curIndex].senPartFive}`
             })
         })
@@ -60,7 +60,7 @@ class ScenarioDisplay extends Component {
                     ) : (
                         <div>
                             <button className="button-div-one" onClick={()=>this.handleDivButtonClick()}>
-                                <h3>Get Sentence</h3> 
+                                <h2>Get Sentence</h2> 
                             </button>
                         </div>
                     )

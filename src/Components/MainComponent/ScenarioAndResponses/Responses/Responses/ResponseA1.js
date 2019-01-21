@@ -120,19 +120,22 @@ class ResponseA1 extends Component {
         return(
             <div className='response-a-one' >
                 {this.state.submitedInput.length ? (
-                    <div className='response-a-two'>
+                    <div className='response-a-three'>
                         <p>{this.state.submitedInput}</p>
-                        <button onClick={()=>this.clearSumbitedInput()}>Reset</button>
                         <button onClick={()=>this.updateResponse()}>Add</button>
+                        <br />
+                        <button onClick={()=>this.clearSumbitedInput()}>Reset</button>
                     </div>
                 ) : (
                     <div className='response-a-two'>
+                        <h3>Add Your Own Word</h3>
                         <input className='response-input' 
                         onChange={(e)=>this.handleUserInput(e.target.value)}
                         />
-                        <br />
                         <button onClick={()=>this.handleButtonClick()}>Add</button> 
                         <br />
+                        <p>Or...</p>
+                        <h3>Get Random Word</h3>
                         <button onClick={()=>this.handleAddRandom()}>Add Random</button>
                     </div>
                 )
