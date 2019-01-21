@@ -164,4 +164,8 @@ module.exports = {
         };
         res.status(200).send(arrayOfItems);
     },
+    protocolX: (req, res)=>{
+        arrayOfItems = [];
+        res.status(200)
+    }
 }  

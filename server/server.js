@@ -22,7 +22,7 @@ app.put(`/api/info/c`, ctrl.updateC);
 
 app.put(`/api/info/d`, ctrl.updateD); 
 
-// app.delete();
+app.delete(`/api/protocol/x`, ctrl.protocolX);
 
 
 

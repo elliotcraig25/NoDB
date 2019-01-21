@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import StatelessFunc from './StatelessFunc';
 import SideButtonsComponent from './SideButtonsComponent';
+import ButtonX from './ButtonX';
 
 class ParentSideComponent extends Component {
     constructor(){
@@ -9,7 +10,6 @@ class ParentSideComponent extends Component {
         this.state = {
             theWord: 'Mark',
             theWordFinal: '',
-            deletePage: false
         }
     }
     handleUserInput(value){
@@ -30,6 +30,7 @@ class ParentSideComponent extends Component {
                         <div>
                             <StatelessFunc word={this.state.theWordFinal}/>
                             <SideButtonsComponent />
+                            <ButtonX />
                         </div>
                         
                     ) : (
@@ -37,6 +38,7 @@ class ParentSideComponent extends Component {
                             <p>Hi there, what's your name?</p>
                             <input onChange={(e)=>this.handleUserInput(e.target.value)}/>
                             <button onClick={()=>this.moveToFinal()}>That's my name</button>
+                            <ButtonX />
                         </div>
                     )}
             </div>
