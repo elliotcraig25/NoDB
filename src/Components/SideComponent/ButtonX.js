@@ -42,7 +42,7 @@ class ButtonX extends Component {
                     </div>
                 ) : (
                     <div className="button-x">
-                        <button onClick={()=>this.changeButtonX()} className="the-button-x">button X</button>
+                        <button onClick={()=>this.changeButtonX()} className="the-button-x">Button X</button>
                     </div>
                 )
                 }
