@@ -24,7 +24,7 @@ class ScenarioDisplay extends Component {
                     ${response.data[this.state.curIndex].senPartThree} 
                     ${response.data[this.state.curIndex].wordHolderThree}
                     ${response.data[this.state.curIndex].senPartFour}
-                    ${response.data[this.state.curIndex].wordHolderFour}
+                    ${response.data[this.state.curIndex].wordHolderFour}ed
                     ${response.data[this.state.curIndex].senPartFive}`
             })
         })

@@ -60,6 +60,46 @@ class ResponseA1 extends Component {
         
     }
 
+    handleAddRandom(){
+        if(this.state.identification==='a'){
+            axios.get(`https://randomuser.me/api/?results=1`)
+            .then(res => {
+                console.log(res.data.results[0].name.first)
+                this.setState({
+                    submitedInput: res.data.results[0].name.first
+            })
+        })
+        }else if(this.state.identification==='b'){
+            axios.get(`https://randomuser.me/api/?results=1`)
+            .then(res => {
+                console.log(res.data.results[0].location.city)
+                this.setState({
+                    submitedInput: res.data.results[0].location.city
+                })
+            })
+        }else if(this.state.identification==='c'){
+            axios.get(`https://randomuser.me/api/?results=1`)
+            .then(res => {
+                console.log(res.data.results[0].name.first)
+                this.setState({
+                    submitedInput: res.data.results[0].name.first
+            })
+        })
+        }else if(this.state.identification==='d'){
+            axios.get(`https://randomuser.me/api/?results=1`)
+            .then(res => {
+                console.log(res.data.results[0].name.first)
+                this.setState({
+                    submitedInput: res.data.results[0].name.first
+                })
+            })
+        } 
+        
+        
+        
+        
+    }
+
     // //this is what i'm working on at commit
     // postResponseBoxInfo(){
     //     let bodyObj = {
@@ -91,6 +131,7 @@ class ResponseA1 extends Component {
                         onChange={(e)=>this.handleUserInput(e.target.value)}
                         />
                         <button onClick={()=>this.handleButtonClick()}>Add</button> 
+                        <button onClick={()=>this.handleAddRandom()}>Add Random</button>
                     </div>
                 )
                 }

@@ -30,14 +30,14 @@
 }
 
   .main-body-title {
-    background-color: tomato;
+    background-color: 	#a9958d;
     height: 100px;
     width: 100%;
     display: flex;
   }
 
   .scenario-and-response {
-    background-color: aqua;
+    /* background-color: aqua; */
     height: calc(100% - 100px);
     width: 100%;
     display: flex;
@@ -45,10 +45,12 @@
   }
   
     .scenario-display {
-      background-color: lawngreen;
+      /* background-color: lawngreen; */
       height: 50%;
       width: 100%;
       display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
       .scenario-display-button {
@@ -57,7 +59,7 @@
       }
     
     .responses-display {
-      background-color: mediumpurple;
+      background-color: #cfc0b7;
       height: 50%;
       width: 100%;
       display: flex;
@@ -66,7 +68,7 @@
     }
 
       .response-a-one {
-        background-color: tan;
+        background-color: #e8dfd9;
         height: 60%;
         width: 200px;
         display: flex;
@@ -81,18 +83,19 @@
           
 
 .sidebar {
-  background-color: slateblue;
+  background-color: #e8dfd9;
   height: 100vh;
   width: 300px;
   display: flex;
 }
 
 .button-div-one {
-  background-color: cadetblue;
+  background-color: #bba9a2;
   height: 100px;
-  width: 100px;
+  width: 200px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 @keyframes App-logo-spin {
