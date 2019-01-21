@@ -8,7 +8,8 @@ class ParentSideComponent extends Component {
         super();
         this.state = {
             theWord: 'Mark',
-            theWordFinal: ''
+            theWordFinal: '',
+            deletePage: false
         }
     }
     handleUserInput(value){
@@ -25,20 +26,20 @@ class ParentSideComponent extends Component {
     render(){
         return (
             <div className="sidebar">
-                {this.state.theWordFinal.length ? (
-                    <div className="sidebar">
-                        <StatelessFunc word={this.state.theWordFinal}/>
-                        <SideButtonsComponent />
-                    </div>
-                    
-                ) : (
-                    <div className="sidebar">
-                        <p>Hi there, what's your name?</p>
-                        <input onChange={(e)=>this.handleUserInput(e.target.value)}/>
-                        <button onClick={()=>this.moveToFinal()}>That's my name</button>
-                    </div>
-                )}
-                </div>
+                    {this.state.theWordFinal.length ? (
+                        <div>
+                            <StatelessFunc word={this.state.theWordFinal}/>
+                            <SideButtonsComponent />
+                        </div>
+                        
+                    ) : (
+                        <div>
+                            <p>Hi there, what's your name?</p>
+                            <input onChange={(e)=>this.handleUserInput(e.target.value)}/>
+                            <button onClick={()=>this.moveToFinal()}>That's my name</button>
+                        </div>
+                    )}
+            </div>
         )
     }
 }
