@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import StatelessFunc from './StatelessFunc';
+import SideButtonsComponent from './SideButtonsComponent';
 
 class ParentSideComponent extends Component {
     constructor(){
@@ -27,6 +28,7 @@ class ParentSideComponent extends Component {
                 {this.state.theWordFinal.length ? (
                     <div className="sidebar">
                         <StatelessFunc word={this.state.theWordFinal}/>
+                        <SideButtonsComponent />
                     </div>
                     
                 ) : (
