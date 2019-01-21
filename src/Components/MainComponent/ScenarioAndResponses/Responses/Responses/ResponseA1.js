@@ -80,17 +80,17 @@ class ResponseA1 extends Component {
         }else if(this.state.identification==='c'){
             axios.get(`https://randomuser.me/api/?results=1`)
             .then(res => {
-                console.log(res.data.results[0].name.first)
+                console.log(res.data.results[0].name.last)
                 this.setState({
-                    submitedInput: res.data.results[0].name.first
+                    submitedInput: res.data.results[0].name.last
             })
         })
         }else if(this.state.identification==='d'){
             axios.get(`https://randomuser.me/api/?results=1`)
             .then(res => {
-                console.log(res.data.results[0].name.first)
+                console.log(res.data.results[0].gender)
                 this.setState({
-                    submitedInput: res.data.results[0].name.first
+                    submitedInput: res.data.results[0].gender
                 })
             })
         } 
@@ -130,7 +130,9 @@ class ResponseA1 extends Component {
                         <input className='response-input' 
                         onChange={(e)=>this.handleUserInput(e.target.value)}
                         />
+                        <br />
                         <button onClick={()=>this.handleButtonClick()}>Add</button> 
+                        <br />
                         <button onClick={()=>this.handleAddRandom()}>Add Random</button>
                     </div>
                 )

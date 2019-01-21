@@ -6,13 +6,6 @@ import MainBody from './Components/MainComponent/MainBody'
 import ParentSideComponent from './Components/SideComponent/ParentSideComponent'
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-
-    };
-  }
-
   render() {
     return (
       <div className="App">

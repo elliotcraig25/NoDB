@@ -57,6 +57,7 @@ let arrayOfItems = [
     wordHolderThree: '(Noun Here)',
     wordHolderFour: '(Past Tense Verb Here)',}, 
 ];
+let showOnSide = []
 
 module.exports = {
     module: {
