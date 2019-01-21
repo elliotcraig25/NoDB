@@ -10,7 +10,7 @@ class MainBodyTitle extends Component {
     render(){
         return (
             <div className="main-body-title">
-                <h1>Title Here</h1>
+                <h1>Make a Sentence</h1>
             </div>
         )
     }
