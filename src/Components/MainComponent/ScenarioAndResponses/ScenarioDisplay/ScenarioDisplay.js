@@ -65,7 +65,7 @@ class ScenarioDisplay extends Component {
                         </div>
                     )
                 }
-            </div>
+            </div> 
         );
     };
 };

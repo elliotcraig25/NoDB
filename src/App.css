@@ -67,20 +67,18 @@
 
       .response-a-one {
         background-color: tan;
-        height: 90%;
+        height: 60%;
         width: 200px;
         display: flex;
         flex-direction: column;
       }
 
-        .response-a-two {
+        /* .response-a-two {
           display: flex;
           flex-direction: column;
-        }
+        } */
 
-          .response-input {
-            
-          }
+          
 
 .sidebar {
   background-color: slateblue;

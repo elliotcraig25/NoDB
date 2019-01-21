@@ -21,6 +21,7 @@ class ResponseA1 extends Component {
             submitedInput: this.state.userInput,
             userInput: ''
         })
+        
         // console.log(this.state.submitedInput)
     }
 
