@@ -78,11 +78,11 @@ class ResponseA1 extends Component {
                 })
             })
         }else if(this.state.identification==='c'){
-            axios.get(`https://randomuser.me/api/?results=1`)
+            axios.get(`https://official-joke-api.appspot.com/random_joke`)
             .then(res => {
-                console.log(res.data.results[0].name.last)
+                console.log(res.data.punchline)
                 this.setState({
-                    submitedInput: res.data.results[0].name.last
+                    submitedInput: res.data.punchline
             })
         })
         }else if(this.state.identification==='d'){
